@@ -69,7 +69,7 @@ public class ButtonWater : MonoBehaviour
         // Отправляем сигнал "on 2" на Arduino
         if (arduinoController != null)
         {
-            //arduinoController.SendSignal("on 2");
+            arduinoController.SendSignal("on 2");
             Debug.Log("Signal sent: on 2");
         }
         else
@@ -93,7 +93,7 @@ public class ButtonWater : MonoBehaviour
         // Отправляем сигнал "off 2" на Arduino
         if (arduinoController != null)
         {
-            //arduinoController.SendSignal("off 2");
+            arduinoController.SendSignal("off 2");
             Debug.Log("Signal sent: off 2");
         }
         else

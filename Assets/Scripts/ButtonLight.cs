@@ -30,10 +30,12 @@ public class ButtonLight : MonoBehaviour
         imagebutton.sprite = isOn ? spriteOn : spriteOff; // Устанавливаем соответствующее изображение
 
         // Отправляем сигнал на Arduino
-        string signal = isOn ? "on 1" : "off 1";
+        string signal = isOn ? "on 3" : "off 3";
+        string signal2 = isOn ? "on 4" : "off 4";
         if (arduinoController != null)
         {
-            //arduinoController.SendSignal(signal); // Отправляем сигнал через ArduinoController
+            arduinoController.SendSignal(signal); // Отправляем сигнал через ArduinoController
+            arduinoController.SendSignal(signal2); // Отправляем сигнал через ArduinoController
         }
         else
         {
